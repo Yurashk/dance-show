@@ -1,0 +1,6 @@
+{
+  "routes": {
+    "/dance-show": {},
+    "/dance-show/video": {}
+  }
+}
