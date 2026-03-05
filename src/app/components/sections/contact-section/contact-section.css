@@ -1,0 +1,465 @@
+.contact-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 40px;
+  overflow: hidden;
+}
+
+.contact-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.contact-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+  filter: blur(40px);
+}
+
+.contact-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.contact-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #e9d5ff;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-bottom: 16px;
+  text-shadow: 
+    0 0 30px rgba(139, 92, 246, 0.6),
+    0 0 60px rgba(139, 92, 246, 0.3);
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: rgba(233, 213, 255, 0.6);
+  letter-spacing: 2px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 1fr);
+  gap: 40px;
+}
+
+.tickets-full-width {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.6) 0%, rgba(22, 33, 62, 0.6) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 24px;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.tickets-full-width:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 
+    0 8px 40px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(139, 92, 246, 0.1);
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pricing-table th {
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #a78bfa;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.pricing-table th:last-child {
+  text-align: right;
+}
+
+.pricing-table td {
+  padding: 20px;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.pricing-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pricing-table tr {
+  animation: fadeInRow 0.5s ease-out backwards;
+  transition: all 0.3s ease;
+}
+
+.pricing-table tbody tr:hover {
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.ticket-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e9d5ff;
+  letter-spacing: 0.5px;
+}
+
+.ticket-description {
+  font-size: 0.85rem;
+  color: rgba(233, 213, 255, 0.6);
+}
+
+.ticket-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #a78bfa;
+  text-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.contact-column {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.6) 0%, rgba(22, 33, 62, 0.6) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 24px;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.contact-column:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 
+    0 8px 40px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(139, 92, 246, 0.1);
+  transform: translateY(-4px);
+}
+
+.column-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #a78bfa;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.price-table {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  animation: fadeInRow 0.5s ease-out backwards;
+}
+
+.price-row:hover {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.3);
+  transform: translateX(4px);
+}
+
+.price-info {
+  text-align: left;
+}
+
+.price-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #e9d5ff;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.price-description {
+  font-size: 0.75rem;
+  color: rgba(233, 213, 255, 0.5);
+}
+
+.price-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #a78bfa;
+  text-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+  white-space: nowrap;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  border-radius: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  background: rgba(139, 92, 246, 0.1);
+  transform: translateX(4px);
+}
+
+.contact-card[data-type="phone"]:hover {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.contact-card[data-type="whatsapp"]:hover {
+  border-color: #25D366;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.2);
+}
+
+.contact-card[data-type="instagram"]:hover {
+  border-color: #E4405F;
+  box-shadow: 0 0 20px rgba(228, 64, 95, 0.2);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(139, 92, 246, 0.15);
+  border-radius: 12px;
+  color: #a78bfa;
+  flex-shrink: 0;
+}
+
+.contact-card[data-type="whatsapp"] .card-icon {
+  background: rgba(37, 211, 102, 0.15);
+  color: #25D366;
+}
+
+.contact-card[data-type="instagram"] .card-icon {
+  background: rgba(228, 64, 95, 0.15);
+  color: #E4405F;
+}
+
+.card-content {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-label {
+  font-size: 0.8rem;
+  color: rgba(233, 213, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-value {
+  font-size: 1rem;
+  color: #e9d5ff;
+  font-weight: 500;
+}
+
+.card-arrow {
+  font-size: 1.2rem;
+  color: rgba(139, 92, 246, 0.4);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .card-arrow {
+  color: #8b5cf6;
+  transform: translateX(4px);
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 16px;
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  border-radius: 14px;
+  text-decoration: none;
+  color: #e9d5ff;
+  transition: all 0.3s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-4px);
+  background: rgba(139, 92, 246, 0.1);
+}
+
+.social-card span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(233, 213, 255, 0.7);
+}
+
+.social-card.whatsapp:hover {
+  border-color: #25D366;
+  box-shadow: 0 0 25px rgba(37, 211, 102, 0.3);
+  color: #25D366;
+}
+
+.social-card.whatsapp:hover span {
+  color: #25D366;
+}
+
+.social-card.instagram:hover {
+  border-color: #E4405F;
+  box-shadow: 0 0 25px rgba(228, 64, 95, 0.3);
+  color: #E4405F;
+}
+
+.social-card.instagram:hover span {
+  color: #E4405F;
+}
+
+.social-card.tiktok:hover {
+  border-color: #fff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.social-card.facebook:hover {
+  border-color: #1877F2;
+  box-shadow: 0 0 25px rgba(24, 119, 242, 0.3);
+  color: #1877F2;
+}
+
+.social-card.facebook:hover span {
+  color: #1877F2;
+}
+
+.social-card.youtube:hover {
+  border-color: #FF0000;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+  color: #FF0000;
+}
+
+.social-card.youtube:hover span {
+  color: #FF0000;
+}
+
+@keyframes fadeInRow {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .tickets-full-width {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 80px 20px;
+  }
+  
+  .contact-title {
+    font-size: 2rem;
+    letter-spacing: 6px;
+  }
+  
+  .contact-header {
+    margin-bottom: 50px;
+  }
+  
+  .contact-column {
+    padding: 24px;
+  }
+  
+  .pricing-table th,
+  .pricing-table td {
+    padding: 14px 12px;
+  }
+  
+  .ticket-name {
+    font-size: 0.9rem;
+  }
+  
+  .ticket-description {
+    font-size: 0.75rem;
+  }
+  
+  .ticket-price {
+    font-size: 1.1rem;
+  }
+  
+  .social-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .social-card {
+    padding: 16px 12px;
+  }
+  
+  .social-card span {
+    font-size: 0.65rem;
+  }
+}

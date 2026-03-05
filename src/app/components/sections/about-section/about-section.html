@@ -1,0 +1,60 @@
+<section class="about-section" id="about">
+  <div class="about-bg">
+    <div class="about-glow"></div>
+    <div class="about-particles"></div>
+  </div>
+  
+  <div class="about-container">
+    <div class="about-header">
+      <span class="about-badge">{{ t('about.badge') }}</span>
+      <h2 class="about-title">{{ t('about.title') }}</h2>
+      <p class="about-subtitle">{{ t('about.subtitle') }}</p>
+    </div>
+    
+    <div class="about-story">
+      <div class="story-visual">
+        <div class="story-icon">🎭</div>
+      </div>
+      <div class="story-content">
+        <h3 class="story-heading">{{ t('about.storyTitle') }}</h3>
+        <p class="story-text">{{ t('about.story') }}</p>
+        <div class="story-stats">
+          <div class="stat">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Professional Dancers</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">100K+</span>
+            <span class="stat-label">Happy Viewers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="gallery">
+      <h3 class="gallery-heading">{{ t('about.galleryTitle') }}</h3>
+      <div class="gallery-grid">
+        <div 
+          *ngFor="let item of galleryItems; let i = index" 
+          class="gallery-item"
+          [style.animation-delay]="i * 0.15 + 's'"
+        >
+          <div class="gallery-image">
+            <img [src]="item.image" [alt]="t(item.titleKey)" />
+            <div class="gallery-overlay">
+              <span class="view-icon">👁</span>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4 class="gallery-title">{{ t(item.titleKey) }}</h4>
+            <p class="gallery-description">{{ t(item.descriptionKey) }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

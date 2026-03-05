@@ -1,0 +1,17 @@
+<nav>
+  <div class="nav-items">
+    <a 
+      *ngFor="let item of navItems; let i = index"
+      [routerLink]="['/']"
+      [fragment]="item.fragment"
+      class="nav-item"
+      [class.active]="isActive(item.fragment)"
+      [style.animation-delay]="i * 0.1 + 's'"
+    >
+      <div class="nav-dot"></div>
+      <div class="nav-glow"></div>
+      <span class="nav-tooltip">{{ t(item.labelKey) }}</span>
+    </a>
+  </div>
+  <div class="nav-line"></div>
+</nav>

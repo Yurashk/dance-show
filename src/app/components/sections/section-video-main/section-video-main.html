@@ -1,0 +1,43 @@
+<section class="video-section" id="hero">
+  <div class="slider-background">
+    <div 
+      *ngFor="let slide of slides; let i = index" 
+      class="slide"
+      [class.active]="i === currentSlide()"
+    >
+      <div class="slide-image" [style.background-image]="'url(' + slide.image + ')'"></div>
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slider-glow"></div>
+  </div>
+  
+  <div class="slider-dots">
+    <button 
+      *ngFor="let slide of slides; let i = index"
+      class="dot"
+      [class.active]="i === currentSlide()"
+      (click)="goToSlide(i)"
+    ></button>
+  </div>
+  
+  <div class="video-content">
+    <div class="content-badge">Ballet Show 2026</div>
+    <h1 class="video-title">{{ t('video.title') }}</h1>
+    <p class="video-description">{{ slides[currentSlide()].description }}</p>
+    <div class="content-meta">
+      <span class="meta-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        Live Performance
+      </span>
+      <span class="meta-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        90 min
+      </span>
+    </div>
+  </div>
+  
+  <div class="scroll-indicator" (click)="scrollToNext()">
+    <span>Scroll to explore</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>

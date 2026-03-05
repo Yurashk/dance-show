@@ -1,0 +1,103 @@
+.language-selector {
+  position: relative;
+  z-index: 100;
+}
+
+.language-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.9) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  border-radius: 8px;
+  color: #e9d5ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.language-button:hover,
+.language-button.active {
+  border-color: #8b5cf6;
+  box-shadow: 
+    0 0 15px rgba(139, 92, 246, 0.4),
+    0 0 30px rgba(139, 92, 246, 0.2);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(22, 33, 62, 0.9) 100%);
+}
+
+.flag {
+  font-size: 16px;
+}
+
+.code {
+  letter-spacing: 1px;
+}
+
+.arrow {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+  opacity: 0.7;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 160px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 0 20px rgba(139, 92, 246, 0.3),
+    0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  color: #e9d5ff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  text-align: left;
+}
+
+.language-option:hover {
+  background: rgba(139, 92, 246, 0.2);
+}
+
+.language-option.selected {
+  background: rgba(139, 92, 246, 0.3);
+  border-left: 2px solid #8b5cf6;
+}
+
+.language-option .name {
+  opacity: 0.9;
+}
+
+.language-option:hover .name,
+.language-option.selected .name {
+  opacity: 1;
+}
